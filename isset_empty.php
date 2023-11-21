@@ -11,11 +11,10 @@
 <body>
 
     <form action="isset_empty.php" method="post">
-
-        <label for="username">Username</label>
+       <label for="username">Username</label>
         <input type="text" name="username">
 
-        <label for="password">Password</label>
+<label for="password">Password</label>
         <input type="password" name="password">
 
         <input type="submit" name="login" value="LOGIN">
@@ -30,7 +29,7 @@
 
 <?php
 
-foreach ($_POST as $key => $Value) {  //itera i valori dei 2 campi + bel bottone login. $_POST crea un array con la lista dei valori
+foreach ($_POST as $key => $Value) { //itera i valori dei 2 campi + bel bottone login. $_POST crea un array con la lista dei valori
     echo "{$key} = {$Value} <br>";
 }
 

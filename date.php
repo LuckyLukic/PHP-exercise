@@ -2,7 +2,7 @@
 //timestamp = quantita' secondi passati da 1 GEnnaio 1970
 //date() converte timestamp in formato leggibile
 
-$date =  date("d-m-Y", 0);  // 0 uguale 1 gennaio 1970
+$date = date("d-m-Y", 0); // 0 uguale 1 gennaio 1970
 echo $date . "<br>";
 
 // PARAMETRI:
@@ -10,7 +10,7 @@ echo $date . "<br>";
 // d = numero del giorno
 // D = nome del giorno abbreviato
 // l = nome del giorno completo
-// m = numero del mese 
+// m = numero del mese
 // M = nome del mese
 // y = anno con 2 cifre finali
 // Y = anno con 4 cifre finali
@@ -18,10 +18,10 @@ echo $date . "<br>";
 
 // h = ore in formato 12
 // H = ore in formato 24
-// i = minuti 
-// s = secondi 
+// i = minuti
+// s = secondi
 // a = am e pm in minuscolo
-// A = AM e PM in maiuscolo 
+// A = AM e PM in maiuscolo
 
 $data2 = date("H:i:s", 1878558103);
 echo $data2 . "<br>";
@@ -41,6 +41,3 @@ echo $today2 . "<br>";
 //calcolo delle date
 $date3 = date("d-m-Y", strtotime("now" . " +7 days"));
 echo $date3;
-
-
-?>

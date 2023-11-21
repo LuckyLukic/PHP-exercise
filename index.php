@@ -1,5 +1,11 @@
 <?php
 
+require __DIR__ . '/vendor/autoload.php';
+use Cocur\Slugify\Slugify;
+
+$slugify = new Slugify();
+echo $slugify->slugify("hello World") . "<br>";
+
 echo "I like Pizza <br>";
 echo "It's really good <br>";
 //this is a comment
@@ -9,10 +15,9 @@ $food = "pizza";
 $age = 43; //integer
 $quantity = 3;
 $price = 4.99; //float
-$employed = true; //boolean  
+$employed = true; //boolean
 $for_sale = false;
 $total = $quantity * $price;
-
 
 echo $name;
 
@@ -26,7 +31,6 @@ echo "You took {$quantity} pizzas, the total amount is \${$total} <br>";
 // ARITHMETIC
 
 // Precedence: () _ ** _ */% _ + -
-
 
 ?>
 
@@ -74,7 +78,6 @@ echo "{$_POST["password"]} <br>";
 $pizzaQuantity = $_GET["quantity"];
 $pizzaPrice = 4.90;
 $totalAmount = $pizzaPrice * $pizzaQuantity;
-
 
 echo "{$pizzaQuantity} <br>"; //Recupera dal form ocn metodo Get, il valore di username
 // con il metodo GET i dati sensibili sono appended all'URL e quindi esposti.
