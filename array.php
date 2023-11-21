@@ -6,6 +6,7 @@ $food_3 = "banana";
 $food_4 = "coconut";
 
 $foods = array("apple", "orange", "banana", "coconut");
+$foodsss = ["apple", "orange", "banana", "coconut"]; //possiamo creare l'array anche cosi'
 
 //we can't print the whole array, we must iterate it to get what's inside
 
@@ -33,6 +34,10 @@ foreach ($foods as $food) {  //iteration with foreach
 
 }
 
+for ($i = 0; $i < count($foods); $i++) { //metodo tradizionale, count() per fare il check sulla lunghezza totale dell'array
+    echo $foods[$i] . "<br>";
+}
+
 array_pop($foods); //eliminate the last item of the list;
 
 foreach ($foods as $food) {  //iteration with foreach
@@ -57,6 +62,12 @@ foreach ($reversed_food as $food) {  //iteration with foreach
 
 }
 
-echo count($reversed_food); // to count the total element inside the array.
+echo count($reversed_food) . "<br>"; // to count the total element inside the array.
+
+sort($foodsss); // per elencarlo in ordine alfabetico;
+print_r($foodsss) ; //print_r() per mandare a schermo un array  con gli indici
+
+rsort($foodsss);
+print_r($foodsss);
 
 ?>

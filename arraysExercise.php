@@ -12,7 +12,7 @@
 
     <form action="arraysExercise.php" method="post">
 
-        <label for="country"> Entr a country</label>
+        <label for="country"> Enter a country</label>
         <input type="text" name="country" value="country">
         <input type="submit" value="SUBMIT">
 
