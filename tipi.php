@@ -1,6 +1,6 @@
 <?php
 
-string $nome = "luca"; //definiamo la variabile nome come stringa, quindi possiamo cambiare il valore ma non il tipo
+$nome = "luca";
 $eta = 43;  //qui possiamo eventualmente abiare sia valore che tipo
 $temperatura = 36.07;
 $is_onine = true;
@@ -19,9 +19,9 @@ class Persona {
 
 $persona1 = new Persona('Luca', 'Iannice');
 
-var_dump($eta);
+var_dump($eta); //var_dump displays structured info
 
-$eta = "ciaone"
+$eta = "ciaone";
 
 var_dump($eta);
 
