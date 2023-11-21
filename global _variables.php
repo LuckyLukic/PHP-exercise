@@ -29,13 +29,26 @@ $nome = $_POST["nome"];  //scope vriabile globale
 function saluta()
 {
     $nome = "francesco"; //scope varibile di blocco anche se ha lo stesso nome di una variabile globale.
-    echo $GLOBALS["nome"]; //vado a richiamare la variabile globale
+    echo $GLOBALS["nome"]; //vado a richiamare la variabile globale stored all'interno dell'array GLOBALS
 
     echo $nome;
 }
 
 saluta();
 echo $nome;
+
+$x = 10;
+$y = 20;
+
+function cambio()
+{
+    global $x, $y; //richiamo le variabile globali
+    $y = $x + 30;
+
+    echo $y;
+}
+
+cambio();
 
 
 ?>
