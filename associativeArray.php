@@ -67,4 +67,4 @@ foreach ($capitals as $capital) {  //to iterate all the key/values
 echo count($capitals)
 
 //to sort the associative arrays: ksort(): per key, rksort(); per reverse key, asort(): per value; rasort(): per reverse value.
-    ?>
+?>
