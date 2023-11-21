@@ -60,6 +60,7 @@ echo "You took {$quantity} pizzas, the total amount is \${$total} <br>";
 
     </form>
 
+
 </body>
 
 </html>

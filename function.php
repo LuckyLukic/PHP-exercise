@@ -12,4 +12,8 @@ function somma( int $num1, int $num2): int {  //possiamo essere precisi indicand
 
 echo $somma;
 
+function saluta () {
+    echo "ciao bello";
+}
+
 ?>
