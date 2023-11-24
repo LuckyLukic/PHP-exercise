@@ -1,6 +1,6 @@
 <?php
 
-//file di testo di piccole dimensioni usate specialmente per salvare le preferenze sul sito
+//file di testo di piccole dimensioni usate specialmente per salvare le preferenze del sito
 // i vlaori possibili del coockie sono (name, value, expire, path, domain, secure)
 // per controllarlo: inspect, application coockie
 
