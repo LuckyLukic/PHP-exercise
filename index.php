@@ -84,10 +84,15 @@ echo "{$pizzaQuantity} <br>"; //Recupera dal form ocn metodo Get, il valore di u
 // GET migliore per bookmark con valori, e perce' le richieste sono chachabili.In definitiva migliore per ricercare pagine
 
 echo "You have ordered {$pizzaQuantity} pizza/s at \${$pizzaPrice} each <br>";
-echo "total amount is \${$totalAmount}";
+echo "total amount is \${$totalAmount}  <br>";
 
-require_once 'Account.php';
+require_once 'Class.php';
 
-$myAccount = new Account();
+$myAccount = new Account("Jhon", 20);
+//$johnsAccount = new Account();
 
+//$myAccount->balance = 20;
+var_dump($myAccount->balance);
+//echo "<br>";
+//var_dump($johnsAccount);
 ?>
