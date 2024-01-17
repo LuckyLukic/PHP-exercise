@@ -71,8 +71,8 @@ echo "You took {$quantity} pizzas, the total amount is \${$total} <br>";
 
 <?php
 
-echo "{$_POST["username"]} <br>";
-echo "{$_POST["password"]} <br>";
+echo "{$_POST['username']} <br>";
+echo "{$_POST['password']} <br>";
 // POST e' piu' sicuro, non ha limite di dati ma non e' chacbile ma in definitiva migliore per inviare credenziali.
 
 $pizzaQuantity = $_GET["quantity"];
@@ -85,4 +85,9 @@ echo "{$pizzaQuantity} <br>"; //Recupera dal form ocn metodo Get, il valore di u
 
 echo "You have ordered {$pizzaQuantity} pizza/s at \${$pizzaPrice} each <br>";
 echo "total amount is \${$totalAmount}";
+
+require_once 'Account.php';
+
+$myAccount = new Account();
+
 ?>

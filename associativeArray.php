@@ -14,7 +14,8 @@ $capitalsss = [ //short way to create an associative array
     "Japan" => "Kyoto",
     "South Korea" => "Seoul",
     "India" => "New Dheli"
-]
+];
+
 echo "{$capitals["USA"]} <br>"; // to get the value
 
 foreach ($capitals as $Key => $Value) {  //to iterate all the key/values
@@ -66,5 +67,5 @@ foreach ($capitals as $capital) {  //to iterate all the key/values
 
 echo count($capitals)
 
-//to sort the associative arrays: ksort(): per key, rksort(); per reverse key, asort(): per value; rasort(): per reverse value.
-?>
+    //to sort the associative arrays: ksort(): per key, rksort(); per reverse key, asort(): per value; rasort(): per reverse value.
+    ?>
