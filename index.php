@@ -86,7 +86,7 @@ echo "{$pizzaQuantity} <br>"; //Recupera dal form ocn metodo Get, il valore di u
 echo "You have ordered {$pizzaQuantity} pizza/s at \${$pizzaPrice} each <br>";
 echo "total amount is \${$totalAmount}  <br>";
 
-//require_once 'accountclass.php';
+//require_once 'App/accountclass.php';
 
 //to upload all the classes not defined in the file but required.
 spl_autoload_register(function ($class) {
@@ -96,15 +96,22 @@ spl_autoload_register(function ($class) {
     require_once $path;
 });
 
-use App\Bank\Account; //importo il namespace perche' ho organizzato il file class.php con namespace, altrimenti non posso utilizzare la classe Account
+use App\{Account, Utility}; //importo il namespace perche' ho organizzato il file class.php con namespace, altrimenti non posso utilizzare la classe Account
 
 $myAccount = new Account("John", 20);
 $myAccount?->deposit(50);
 $myAccount?->deposit(30)->deposit(70); //possiamo concatenare piu' volte lo stesso metodo perche' abbiamo specificato return $this nel metodo
 //$johnsAccount = new Account();
-
+var_dump(Account::INTEREST_RATE);  //entering a constant
+echo "<br>";
+var_dump(Account::$count);
+echo "<br>";
 //$myAccount->balance = 20;
 var_dump($myAccount);
+echo "<br>";
+
+Utility::printArr([1, 2, 3, 4, 5]); //richiamiamo la classe Utility e accediamo al metodo statico senza istanziare la classe.
+
 //echo "<br>";
 //var_dump($johnsAccount);
 ?>

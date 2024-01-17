@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Bank;
+namespace App;
 
 
 // OLD WAY
@@ -24,8 +24,13 @@ namespace App\Bank;
 class Account
 {
 
+    public const INTEREST_RATE = 2;
+    public static int $count = 0;
+
     public function __construct(public string $name, public float $balance)
     {
+
+        self::$count++; //static properties posssono essere accesse anche senza l'istanzia, quindi $this non funzionerebbe. con self ci riferiamo alla classe e non all'istanza.
     }
 
 
