@@ -102,12 +102,16 @@ $myAccount = new Account("John", 20);
 $myAccount?->deposit(50);
 $myAccount?->deposit(30)->deposit(70); //possiamo concatenare piu' volte lo stesso metodo perche' abbiamo specificato return $this nel metodo
 //$johnsAccount = new Account();
-var_dump(Account::INTEREST_RATE);  //entering a constant
+//var_dump(Account::INTEREST_RATE);  //entering a constant if it is public
+var_dump(Account::getMyConstant());
+
 echo "<br>";
 var_dump(Account::$count);
 echo "<br>";
-//$myAccount->balance = 20;
-var_dump($myAccount);
+//$myAccount->balance = 20; //if it is public
+
+$myAccount->setBalance(20);
+var_dump($myAccount->getBalance());
 echo "<br>";
 
 Utility::printArr([1, 2, 3, 4, 5]); //richiamiamo la classe Utility e accediamo al metodo statico senza istanziare la classe.
