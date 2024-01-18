@@ -96,7 +96,7 @@ spl_autoload_register(function ($class) {
     require_once $path;
 });
 
-use App\{Account, Utility, ToasterPremium, SuperToaster, RestaurantOne}; //importo il namespace perche' ho organizzato il file class.php con namespace, altrimenti non posso utilizzare la classe Account
+use App\{Account, Utility, ToasterPremium, SuperToaster, RestaurantOne, RestaurantTwo, FoodApp}; //importo il namespace perche' ho organizzato il file class.php con namespace, altrimenti non posso utilizzare la classe Account
 
 $myAccount = new Account("John", 20);
 $myAccount?->deposit(50);
@@ -130,6 +130,12 @@ $mySuperToaster->toast();
 echo "<br>";
 $restaurantOne = new RestaurantOne;
 $restaurantOne->prepareFood();
+echo "<br>";
+$restaurantTwo = new RestaurantTwo;
+
+$myFoodApp = new FoodApp($restaurantOne);
+echo "<br>";
+$myFoodApp2 = new FoodApp($restaurantTwo);
 
 
 ?>
