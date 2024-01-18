@@ -96,7 +96,7 @@ spl_autoload_register(function ($class) {
     require_once $path;
 });
 
-use App\{Account, Utility, ToasterPremium, SuperToaster, RestaurantOne, RestaurantTwo, FoodApp}; //importo il namespace perche' ho organizzato il file class.php con namespace, altrimenti non posso utilizzare la classe Account
+use App\{Account, Utility, ToasterPremium, SuperToaster, RestaurantOne, RestaurantTwo, FoodApp, EmptyArrayException}; //importo il namespace perche' ho organizzato il file class.php con namespace, altrimenti non posso utilizzare la classe Account
 
 $myAccount = new Account("John", 20);
 $myAccount?->deposit(50);
@@ -136,6 +136,22 @@ $restaurantTwo = new RestaurantTwo;
 $myFoodApp = new FoodApp($restaurantOne);
 echo "<br>";
 $myFoodApp2 = new FoodApp($restaurantTwo);
+echo "<br>";
+
+try {
+    Utility::printArr([]);
+
+} catch (InvalidArgumentException | EmptyArrayException $e) {
+    echo "Custom exception: {$e->getMessage()} <br>";
+} catch (Exception $e) {
+    echo "Defaoult exception: {$e->getMessage()} <br>";
+} finally { // il blocco finally viene sempre eseguito
+    echo "Finally blck <br>";
+}
+
+
+echo "Finished running script";
+
 
 
 ?>

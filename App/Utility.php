@@ -22,7 +22,8 @@ class Utility
 
         if (count($array) === 0) {
             //throw new \Exception("Array is empty"); //generic
-            throw new \InvalidArgumentException("Array is empty");  //specific
+            //throw new \InvalidArgumentException("Array is empty");  //specific
+            throw new EmptyArrayException(); //personalized. RImuoviamo il backslash perche la classe e' presente nel namespace App
         }
         echo "<pre>";
         print_r($array);
