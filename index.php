@@ -96,7 +96,7 @@ spl_autoload_register(function ($class) {
     require_once $path;
 });
 
-use App\{Account, Utility}; //importo il namespace perche' ho organizzato il file class.php con namespace, altrimenti non posso utilizzare la classe Account
+use App\{Account, Utility, ToasterPremium}; //importo il namespace perche' ho organizzato il file class.php con namespace, altrimenti non posso utilizzare la classe Account
 
 $myAccount = new Account("John", 20);
 $myAccount?->deposit(50);
@@ -118,4 +118,7 @@ Utility::printArr([1, 2, 3, 4, 5]); //richiamiamo la classe Utility e accediamo 
 
 //echo "<br>";
 //var_dump($johnsAccount);
+
+$myToaster = new ToasterPremium();
+$myToaster->toast(); //accedo al metodo toast ereditato dalla classe Toaster.
 ?>
