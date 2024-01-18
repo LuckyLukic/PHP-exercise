@@ -96,7 +96,7 @@ spl_autoload_register(function ($class) {
     require_once $path;
 });
 
-use App\{Account, Utility, ToasterPremium}; //importo il namespace perche' ho organizzato il file class.php con namespace, altrimenti non posso utilizzare la classe Account
+use App\{Account, Utility, ToasterPremium, SuperToaster, RestaurantOne}; //importo il namespace perche' ho organizzato il file class.php con namespace, altrimenti non posso utilizzare la classe Account
 
 $myAccount = new Account("John", 20);
 $myAccount?->deposit(50);
@@ -120,5 +120,16 @@ Utility::printArr([1, 2, 3, 4, 5]); //richiamiamo la classe Utility e accediamo 
 //var_dump($johnsAccount);
 
 $myToaster = new ToasterPremium();
-$myToaster->toast(); //accedo al metodo toast ereditato dalla classe Toaster.
+$myToaster->toast();
+//accedo al metodo toast ereditato dalla classe Toaster.
+echo ("<br>" . $myToaster->getSlots() . "<br>"); //accedo al metodo getSlots ereditato. uso get perche' protected inclapusla comunque la proprieta' all'interno di quell'istanza.
+
+
+$mySuperToaster = new SuperToaster();
+$mySuperToaster->toast();
+echo "<br>";
+$restaurantOne = new RestaurantOne;
+$restaurantOne->prepareFood();
+
+
 ?>
