@@ -41,3 +41,23 @@ echo $today2 . "<br>";
 //calcolo delle date
 $date3 = date("d-m-Y", strtotime("now" . " +7 days"));
 echo $date3;
+
+//datetime
+$date = new DateTime;
+
+echo "<pre>";
+var_dump($date);
+"</pre>";
+
+
+$timezone = new DateTimeZone("America/Chicago"); //DataTimeZone accetta un parametro per specificare la timezone.
+
+//dateTime accetta formato e instance di una timezone.
+$newDate = new DateTime("12/22/78", $timezone); //passo il formato in cui voglio la data. se uso/ identifico americano (primo numero mese), se uso. identifico europeo, primo numero giorno
+$newDate->setTimezone(new DateTimeZone("Europe/Paris"))
+    ->setDate(2023, 6, 15)
+    ->setTime(9, 30);
+
+echo "<pre>";
+var_dump($newDate->format("F j Y"));
+"</pre>";
