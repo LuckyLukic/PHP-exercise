@@ -96,7 +96,7 @@ spl_autoload_register(function ($class) {
     require_once $path;
 });
 
-use App\{Account, Utility, ToasterPremium, SuperToaster, RestaurantOne, RestaurantTwo, FoodApp, EmptyArrayException}; //importo il namespace perche' ho organizzato il file class.php con namespace, altrimenti non posso utilizzare la classe Account
+use App\{Account, Utility, ToasterPremium, SuperToaster, RestaurantOne, RestaurantTwo, FoodApp, EmptyArrayException, CurrentWeek}; //importo il namespace perche' ho organizzato il file class.php con namespace, altrimenti non posso utilizzare la classe Account
 
 $myAccount = new Account("John", 20);
 $myAccount?->deposit(50);
@@ -146,12 +146,15 @@ try {
 } catch (Exception $e) {
     echo "Defaoult exception: {$e->getMessage()} <br>";
 } finally { // il blocco finally viene sempre eseguito
-    echo "Finally blck <br>";
+    echo "Finally block <br>";
 }
 
 
-echo "Finished running script";
+echo "Finished running script <br>";
 
-
-
+$currentWeek = new CurrentWeek();
+foreach ($currentWeek as $value) {
+    var_dump($value);
+    echo "br";
+}
 ?>
